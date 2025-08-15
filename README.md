@@ -1,193 +1,221 @@
-# 🤖 TDS Data Analyst Agent
+TDS Data Analyst Agent
 
-A powerful AI-driven data analysis platform that combines the capabilities of Google's Generative AI with advanced data processing tools to provide intelligent insights, visualizations, and automated analysis workflows.
+The TDS Data Analyst Agent is an advanced, AI-driven data analysis platform that integrates Google’s Generative AI with robust data processing capabilities. It enables users to upload datasets and analytical questions, providing detailed insights, visualizations, and automated workflows through a web-based interface.
 
-## 📊 Overview
+Overview
 
-The TDS Data Analyst Agent is a web-based application that transforms how you interact with data. Upload your datasets and questions, and receive comprehensive analysis with interactive visualizations, statistical insights, and AI-powered recommendations.
+This application revolutionizes the way users interact with data by offering intelligent analysis, statistical summaries, and dynamic visualizations. Users can upload multiple file formats, perform batch processing, and receive comprehensive reports and AI-generated recommendations.
 
-### Key Features
+Key Features
 
-- **🔍 Intelligent Data Analysis**: AI-powered insights using Google's Generative AI
-- **📈 Interactive Visualizations**: Dynamic charts and graphs using Matplotlib and Seaborn
-- **🌐 Web Scraping**: Extract data from URLs and web pages
-- **📁 Multi-Format Support**: CSV, Excel, JSON, Parquet, and text files
-- **🔄 Batch Processing**: Analyze multiple questions simultaneously
-- **🎨 Modern UI**: Beautiful, responsive web interface
-- **⚡ Real-time Processing**: Fast analysis with progress tracking
+Intelligent Data Analysis: Leverages Google Generative AI for advanced insights.
 
-## 🚀 Quick Start
+Interactive Visualizations: Generates dynamic charts and graphs using Matplotlib and Seaborn.
 
-### Prerequisites
+Web Scraping: Extracts structured data from URLs and web pages.
 
-- Python 3.8 or higher
-- Google Generative AI API key
-- Modern web browser
+Multi-Format Support: Supports CSV, Excel, JSON, Parquet, and plain text files.
 
-### Installation
+Batch Processing: Allows the analysis of multiple questions simultaneously.
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd Project_2
-   ```
+Modern User Interface: Provides a responsive and user-friendly design.
 
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+Real-Time Processing: Ensures fast data analysis with progress tracking.
 
-3. **Set up environment variables**
-   Create a `.env` file in the project root:
-   ```env
-   GOOGLE_API_KEY=your_google_generative_ai_api_key_here
-   LLM_TIMEOUT_SECONDS=150
-   ```
+Quick Start
+Prerequisites
 
-4. **Run the application**
-   ```bash
-   python app.py
-   ```
+Python 3.8 or higher
 
-5. **Access the application**
-   Open your browser and navigate to `http://localhost:8000`
+Google Generative AI API key
 
-## 📖 Usage Guide
+Modern web browser
 
-### 1. Prepare Your Questions
-Create a text file (`.txt`) with your analysis questions. Each question should be on a separate line:
+Installation
 
-```
+Clone the repository:
+
+git clone <repository-url>
+cd Project_2
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Set up environment variables by creating a .env file in the project root:
+
+GOOGLE_API_KEY=your_google_generative_ai_api_key_here
+LLM_TIMEOUT_SECONDS=150
+
+
+Run the application:
+
+python app.py
+
+
+Access the application in your browser at:
+
+http://localhost:8000
+
+Usage Guide
+Step 1: Prepare Questions
+
+Create a .txt file containing your analysis questions, with each question on a separate line:
+
 What are the key trends in the sales data?
 Which products have the highest profit margins?
-Show me a correlation analysis between variables A and B
-```
+Show a correlation analysis between variables A and B.
 
-### 2. Upload Your Data
-- **Questions File**: Required - Your analysis questions in `.txt` format
-- **Dataset**: Optional - Your data in CSV, Excel, JSON, Parquet, or text format
+Step 2: Upload Data
 
-### 3. Get Results
-The agent will:
-- Process your questions and data
-- Generate comprehensive analysis
-- Create interactive visualizations
-- Provide AI-powered insights and recommendations
+Questions File: Required (must be in .txt format).
 
-## 🛠️ Technical Architecture
+Dataset: Optional (supported formats include CSV, Excel, JSON, Parquet, TXT).
 
-### Backend Stack
-- **FastAPI**: High-performance web framework
-- **LangChain**: LLM orchestration and tool integration
-- **Google Generative AI**: Advanced AI capabilities
-- **Pandas & NumPy**: Data manipulation and analysis
-- **Matplotlib & Seaborn**: Data visualization
+Step 3: Receive Results
 
-### Frontend
-- **HTML5/CSS3**: Modern, responsive interface
-- **JavaScript**: Interactive user experience
-- **Bootstrap-inspired styling**: Professional appearance
+The agent will process your questions and data to:
 
-### Data Processing Capabilities
-- **File Formats**: CSV, Excel, JSON, Parquet, TXT
-- **Web Scraping**: HTML tables, API endpoints
-- **Data Cleaning**: Automatic preprocessing
-- **Statistical Analysis**: Descriptive and inferential statistics
+Generate comprehensive analysis
 
-## 🔧 API Endpoints
+Produce interactive visualizations
 
-### Core Endpoints
+Provide AI-powered insights and recommendations
 
-#### `GET /`
-- **Description**: Serve the main web interface
-- **Response**: HTML frontend
+Technical Architecture
+Backend
 
-#### `POST /analyze`
-- **Description**: Process questions and data for analysis
-- **Parameters**:
-  - `questions_file`: Text file with analysis questions
-  - `data_file`: Optional dataset file
-- **Response**: JSON with analysis results and visualizations
+FastAPI for high-performance server-side processing
 
-#### `POST /scrape`
-- **Description**: Extract data from web URLs
-- **Parameters**:
-  - `url`: Target URL to scrape
-- **Response**: JSON with extracted data
+LangChain for LLM orchestration
 
-### Tool Functions
+Google Generative AI for advanced natural language and analytical capabilities
 
-#### `scrape_url_to_dataframe(url)`
-Extracts data from web pages, supporting:
-- HTML tables
-- CSV files
-- Excel files
-- JSON data
-- Plain text
+Pandas & NumPy for data manipulation
 
-#### `analyze_dataframe_with_llm(data, questions)`
-Performs AI-powered analysis on datasets with:
-- Statistical summaries
-- Trend analysis
-- Correlation studies
-- Anomaly detection
-- Predictive insights
+Matplotlib & Seaborn for visualizations
 
-## 📊 Supported Data Formats
+Frontend
 
-| Format | Extension | Description |
-|--------|-----------|-------------|
-| CSV | `.csv` | Comma-separated values |
-| Excel | `.xlsx`, `.xls` | Microsoft Excel files |
-| JSON | `.json` | JavaScript Object Notation |
-| Parquet | `.parquet` | Columnar storage format |
-| Text | `.txt` | Plain text files |
+HTML5/CSS3 for responsive design
 
-## 🎯 Use Cases
+JavaScript for interactivity
 
-### Business Intelligence
-- Sales performance analysis
-- Customer behavior insights
-- Market trend identification
-- Financial data analysis
+Bootstrap-inspired styling for professional appearance
 
-### Research & Analytics
-- Academic research support
-- Statistical analysis
-- Data exploration
-- Hypothesis testing
+Data Processing
 
-### Data Science
-- Exploratory data analysis
-- Feature engineering insights
-- Model performance evaluation
-- Data quality assessment
+Supports multiple file formats (CSV, Excel, JSON, Parquet, TXT)
 
-## 🔒 Security & Privacy
+Includes automated web scraping for HTML tables, CSV/Excel links, and APIs
 
-- **Local Processing**: Data is processed locally on your server
-- **No Data Storage**: Files are processed in memory and not stored
-- **API Key Protection**: Secure environment variable handling
-- **CORS Configuration**: Configurable cross-origin resource sharing
+Performs data cleaning and preprocessing
 
-## 🚀 Deployment
+Offers statistical and inferential analysis
 
-### Local Development
-```bash
+API Endpoints
+GET /
+
+Serves the main web interface.
+
+POST /analyze
+
+Processes questions and datasets.
+Parameters:
+
+questions_file: Required text file containing questions
+
+data_file: Optional dataset file
+
+POST /scrape
+
+Extracts structured data from a given URL.
+Parameters:
+
+url: Target web address
+
+Tool Functions
+
+scrape_url_to_dataframe(url): Extracts data from web pages in formats such as HTML tables, CSV, Excel, JSON, and plain text.
+
+analyze_dataframe_with_llm(data, questions): Performs AI-powered analysis, including statistical summaries, trend identification, correlation studies, anomaly detection, and predictive insights.
+
+Supported Data Formats
+Format	Extension	Description
+CSV	.csv	Comma-separated values
+Excel	.xlsx, .xls	Microsoft Excel spreadsheets
+JSON	.json	JavaScript Object Notation
+Parquet	.parquet	Columnar storage format
+Text	.txt	Plain text files
+Example Use Cases
+
+Business Intelligence
+
+Sales performance monitoring
+
+Customer behavior insights
+
+Market trend identification
+
+Financial reporting
+
+Research & Analytics
+
+Academic research
+
+Hypothesis testing
+
+Data exploration
+
+Statistical modeling
+
+Data Science
+
+Exploratory Data Analysis (EDA)
+
+Feature engineering guidance
+
+Model evaluation
+
+Data quality assessment
+
+Security and Privacy
+
+Local Processing: Data is processed locally on your server.
+
+No Data Storage: Files are processed in memory and not stored persistently.
+
+API Key Protection: Environment variable usage for security.
+
+CORS Configuration: Adjustable for deployment requirements.
+
+Deployment
+
+Local Development
+
 python app.py
-```
 
-### Production Deployment
-1. Set up a production server (AWS, GCP, Azure, etc.)
-2. Install dependencies: `pip install -r requirements.txt`
-3. Configure environment variables
-4. Use a production WSGI server like Gunicorn:
-   ```bash
-   gunicorn app:app -w 4 -k uvicorn.workers.UvicornWorker
-   ```
 
-### Docker Deployment
-```dockerfile
+Production Deployment
+
+Set up a production server (AWS, GCP, Azure, etc.)
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Configure environment variables
+
+Use Gunicorn with Uvicorn workers:
+
+gunicorn app:app -w 4 -k uvicorn.workers.UvicornWorker
+
+
+Docker Deployment
+
 FROM python:3.9-slim
 WORKDIR /app
 COPY requirements.txt .
@@ -195,87 +223,91 @@ RUN pip install -r requirements.txt
 COPY . .
 EXPOSE 8000
 CMD ["python", "app.py"]
-```
 
-## 📝 Configuration
+Configuration
 
-### Environment Variables
+Environment Variables
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `GOOGLE_API_KEY` | Google Generative AI API key | Required |
-| `LLM_TIMEOUT_SECONDS` | Timeout for LLM operations | 150 |
+Variable	Description	Default
+GOOGLE_API_KEY	Google Generative AI API key	Required
+LLM_TIMEOUT_SECONDS	Timeout for LLM operations	150
+Contribution Guidelines
 
-### Customization Options
-- Modify visualization styles in the frontend CSS
-- Adjust analysis parameters in the tool functions
-- Configure CORS settings for production deployment
-- Customize the LLM prompt templates
+Fork the repository
 
-## 🤝 Contributing
+Create a feature branch:
 
-We welcome contributions! Please follow these steps:
+git checkout -b feature-name
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Make your changes and add tests
-4. Commit your changes: `git commit -am 'Add feature'`
-5. Push to the branch: `git push origin feature-name`
-6. Submit a pull request
 
-### Development Setup
-```bash
-# Install development dependencies
+Make your changes and add tests
+
+Commit your changes:
+
+git commit -am "Add feature"
+
+
+Push to your branch:
+
+git push origin feature-name
+
+
+Submit a pull request
+
+Development Setup
+
 pip install -r requirements.txt
-
-# Run tests (when available)
 python -m pytest
-
-# Format code
 black app.py
-```
 
-## 📄 License
+License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-## 🆘 Support & Troubleshooting
+Support and Troubleshooting
 
-### Common Issues
+API Key Error
 
-**API Key Error**
-- Ensure your Google Generative AI API key is correctly set in the `.env` file
-- Verify the API key has the necessary permissions
+Verify the key is set correctly in .env
 
-**File Upload Issues**
-- Check file format compatibility
-- Ensure file size is within limits
-- Verify file encoding (UTF-8 recommended)
+Ensure the key has appropriate permissions
 
-**Analysis Timeout**
-- Increase `LLM_TIMEOUT_SECONDS` in your `.env` file
-- Consider breaking large datasets into smaller chunks
+File Upload Issues
 
-### Getting Help
-- Check the [Issues](../../issues) page for known problems
-- Create a new issue for bugs or feature requests
-- Review the code documentation for technical details
+Confirm the file is in a supported format
 
-## 🔮 Roadmap
+Ensure file size is within acceptable limits
 
-### Upcoming Features
-- [ ] Real-time collaboration
-- [ ] Advanced statistical models
-- [ ] Custom visualization templates
-- [ ] API rate limiting and caching
-- [ ] Multi-language support
-- [ ] Mobile application
+Use UTF-8 encoding where possible
 
-### Version History
-- **v1.0.0**: Initial release with core analysis capabilities
-- **v1.1.0**: Added web scraping functionality
-- **v1.2.0**: Enhanced visualization options
+Analysis Timeout
 
----
+Increase LLM_TIMEOUT_SECONDS in .env
 
-**Built with ❤️ using FastAPI, LangChain, and Google Generative AI**
+Split large datasets into smaller files
+
+Roadmap
+
+Planned Features
+
+Real-time collaboration
+
+Advanced statistical modeling
+
+Custom visualization templates
+
+API rate limiting and caching
+
+Multi-language support
+
+Mobile application
+
+Version History
+
+v1.0.0 – Initial release with core analysis capabilities
+
+v1.1.0 – Added web scraping functionality
+
+v1.2.0 – Enhanced visualization options
+
+Developed using FastAPI, LangChain, and Google Generative AI
